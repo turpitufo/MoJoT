@@ -32,7 +32,8 @@ for (i = 0; i < notes.length; i++) {
 			gridItem.textContent = note.title;
 		}
 	}
-}```
+}
+```
 
 
 - We itirate every note, 
