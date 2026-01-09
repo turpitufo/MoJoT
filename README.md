@@ -8,7 +8,7 @@ A scratchpad for your week, minimal notes&amp;calendar app using vanilla JavaScr
 I did this project so I would learn about js persistent storage.
 I saw some time ago a passion project called noto.ooo and was mesmerized. So I though this was a good progression.
 
-I followed [this tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw&t=148s)(# Build a Notes App with JavaScript & Local Storage (No Frameworks)) except for "source of truth", which was fun to learn, I noticed all the tutorials about it on local storage use one global array approach, quick question to ai confirmed that it was the best method for me rather than complicating things with the appoach in the video. We are editing an array of notes on ram rather than the local storage for every event with a global `let notes = []`, i mean as far as I understand ¯\_(ツ)_/¯
+I followed [this tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw&t=148s)(# Build a Notes App with JavaScript & Local Storage (No Frameworks)) except for "source of truth", which was fun to learn, I noticed all the tutorials about it on local storage use one global array approach, quick question to ai confirmed that it was the best method for me rather than complicating things with the appoach in the video. We are editing an array of notes on ram rather than the local storage for every event with a global `let notes = []`, if i understand correctly, might need further investergation ¯\_(ツ)_/¯
 
  We have grid-items in the HTML so javascript can automatically fill in hour and date when we click at an item, and so it can render from a note with data-day and data-hour.
 
