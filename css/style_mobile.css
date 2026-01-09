@@ -1,11 +1,11 @@
 @media (max-width: 1000px) {
     html, body {
-        overflow: auto; /* Re-enable page scrolling */
+        overflow: auto;
     }
 
     #app {
     flex-direction: column;
-    height: auto; /* Let it grow with content */
+    height: auto;
     }
 
     #sidebar, #editor-area, #calendar-area {
@@ -17,6 +17,6 @@
     }
 
     .schedule-scroll-container {
-        overflow-x: auto; /* Keep the calendar scrollable horizontally */
+        overflow-x: auto;
     }
 }
