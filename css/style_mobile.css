@@ -1,40 +1,22 @@
-@media only screen and (max-width: 768px) {
+@media (max-width: 1000px) {
+    html, body {
+        overflow: auto; /* Re-enable page scrolling */
+    }
+
     #app {
-        flex-direction: column;
-        overflow-y: auto;
-        height: auto;
+    flex-direction: column;
+    height: auto; /* Let it grow with content */
     }
 
     #sidebar, #editor-area, #calendar-area {
-        flex: 1 0 auto; 
-        width: 100%;
-        min-height: 300px; 
-        border-right: none;
-        border-left: none;
-        border-bottom: 2px solid var(--bg2);
-        box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--bg2);
     }
 
-    #sidebar {
-        min-height: auto; 
-    }
-
-    #editor-area {
-        min-height: 40vh; 
-    }
-    
-    #calendar-area {
-        min-height: 60vh; 
-        border-bottom: none;
-    }
-    .calendar-grid-header {
-        grid-template-columns: 40px repeat(5, 1fr);
-    }
-    .schedule-grid {
-        grid-template-columns: 40px repeat(5, 1fr);
-    }
-    .grid-header, .grid-time {
-        font-size: 0.7em;
-        padding: 5px;
+    .schedule-scroll-container {
+        overflow-x: auto; /* Keep the calendar scrollable horizontally */
     }
 }

@@ -3,21 +3,25 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" media="only screen and (max-width: 768px)" href="css/style_mobile.css">
-	<title> Schedule | Tufan's Profile  </title>
+	<title> MoJoT ಠ_ಠ </title>
 	<meta name="Tufan's Profile" content="Assignment" />
 	    <meta name="viewport" content="width=device-width, maximum-scale=3.0,
 	minimum-scale=1.0, initial-scale=1" />
 	    <link rel="icon" href="favicon.ico" type="image/x-icon">
 	</head>
-	
+
 	<body>    <div id="app">
         <aside id="sidebar">
             <header>
-                <h2>MoJot ಠ_ಠ</h2>
+                <h2>
+                    <a href="https://github.com/poaeo/MoJoT" target="_blank" style="text-decoration: none; color: inherit;">
+                    MoJoT ಠ_ಠ
+                    </a>
+                </h2>
                 <button id="new-note">+</button>
             </header>
             <ul id="file-list">
-                <!-- File items will be populated here by JavaScript -->
+                <!-- JS will fill here at runtime, with the use of magic -->
             </ul>
 
             <div id="calendar-properties">
@@ -30,47 +34,189 @@
             <input type="text" id="editor-title-input" placeholder="Note Title..." />
             <textarea id="editor" placeholder="Start writing..."></textarea>
         </main>
+            <section id="calendar-area">
+                <header>
+                    <div class="calendar-grid-header">
+                        <div class="grid-header">Hours</div>
+                        <div class="grid-header" data-day="Monday" style="cursor: pointer;">Monday</div>
+                        <div class="grid-header" data-day="Tuesday" style="cursor: pointer;">Tuesday</div>
+                        <div class="grid-header" data-day="Wednesday" style="cursor: pointer;">Wednesday</div>
+                        <div class="grid-header" data-day="Thursday" style="cursor: pointer;">Thursday</div>
+                        <div class="grid-header" data-day="Friday" style="cursor: pointer;">Friday</div>
+                    </div>
+                </header>
+                <div class="schedule-scroll-container">
+                    <div class="schedule-grid">
+                        <div class="grid-time" data-hour="00">00:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="0"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="0"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="0"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="0"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="0"></div>
 
-                    <section id="calendar-area">
-                        <header>
-                            <div class="calendar-grid-header">
-                                <div class="grid-header">Hours</div>
-                                <div class="grid-header" data-day="Monday" style="cursor: pointer;">Monday</div>
-                                <div class="grid-header" data-day="Tuesday" style="cursor: pointer;">Tuesday</div>
-                                <div class="grid-header" data-day="Wednesday" style="cursor: pointer;">Wednesday</div>
-                                <div class="grid-header" data-day="Thursday" style="cursor: pointer;">Thursday</div>
-                                <div class="grid-header" data-day="Friday" style="cursor: pointer;">Friday</div>
-                            </div>
-                        </header>
-                        <div class="schedule-scroll-container">
-                            <div class="schedule-grid">
-                                <div class="grid-time" data-hour="00">00:00</div><div class="grid-item" data-day="Monday" data-hour="0"></div><div class="grid-item" data-day="Tuesday" data-hour="0"></div><div class="grid-item" data-day="Wednesday" data-hour="0"></div><div class="grid-item" data-day="Thursday" data-hour="0"></div><div class="grid-item" data-day="Friday" data-hour="0"></div>
-                                <div class="grid-time" data-hour="01">01:00</div><div class="grid-item" data-day="Monday" data-hour="1"></div><div class="grid-item" data-day="Tuesday" data-hour="1"></div><div class="grid-item" data-day="Wednesday" data-hour="1"></div><div class="grid-item" data-day="Thursday" data-hour="1"></div><div class="grid-item" data-day="Friday" data-hour="1"></div>
-                                <div class="grid-time" data-hour="02">02:00</div><div class="grid-item" data-day="Monday" data-hour="2"></div><div class="grid-item" data-day="Tuesday" data-hour="2"></div><div class="grid-item" data-day="Wednesday" data-hour="2"></div><div class="grid-item" data-day="Thursday" data-hour="2"></div><div class="grid-item" data-day="Friday" data-hour="2"></div>
-                                <div class="grid-time" data-hour="03">03:00</div><div class="grid-item" data-day="Monday" data-hour="3"></div><div class="grid-item" data-day="Tuesday" data-hour="3"></div><div class="grid-item" data-day="Wednesday" data-hour="3"></div><div class="grid-item" data-day="Thursday" data-hour="3"></div><div class="grid-item" data-day="Friday" data-hour="3"></div>
-                                <div class="grid-time" data-hour="04">04:00</div><div class="grid-item" data-day="Monday" data-hour="4"></div><div class="grid-item" data-day="Tuesday" data-hour="4"></div><div class="grid-item" data-day="Wednesday" data-hour="4"></div><div class="grid-item" data-day="Thursday" data-hour="4"></div><div class="grid-item" data-day="Friday" data-hour="4"></div>
-                                <div class="grid-time" data-hour="05">05:00</div><div class="grid-item" data-day="Monday" data-hour="5"></div><div class="grid-item" data-day="Tuesday" data-hour="5"></div><div class="grid-item" data-day="Wednesday" data-hour="5"></div><div class="grid-item" data-day="Thursday" data-hour="5"></div><div class="grid-item" data-day="Friday" data-hour="5"></div>
-                                <div class="grid-time" data-hour="06">06:00</div><div class="grid-item" data-day="Monday" data-hour="6"></div><div class="grid-item" data-day="Tuesday" data-hour="6"></div><div class="grid-item" data-day="Wednesday" data-hour="6"></div><div class="grid-item" data-day="Thursday" data-hour="6"></div><div class="grid-item" data-day="Friday" data-hour="6"></div>
-                                <div class="grid-time" data-hour="07">07:00</div><div class="grid-item" data-day="Monday" data-hour="7"></div><div class="grid-item" data-day="Tuesday" data-hour="7"></div><div class="grid-item" data-day="Wednesday" data-hour="7"></div><div class="grid-item" data-day="Thursday" data-hour="7"></div><div class="grid-item" data-day="Friday" data-hour="7"></div>
-                                <div class="grid-time" data-hour="08">08:00</div><div class="grid-item" data-day="Monday" data-hour="8"></div><div class="grid-item" data-day="Tuesday" data-hour="8"></div><div class="grid-item" data-day="Wednesday" data-hour="8"></div><div class="grid-item" data-day="Thursday" data-hour="8"></div><div class="grid-item" data-day="Friday" data-hour="8"></div>
-                                <div class="grid-time" data-hour="09">09:00</div><div class="grid-item" data-day="Monday" data-hour="9"></div><div class="grid-item" data-day="Tuesday" data-hour="9"></div><div class="grid-item" data-day="Wednesday" data-hour="9"></div><div class="grid-item" data-day="Thursday" data-hour="9"></div><div class="grid-item" data-day="Friday" data-hour="9"></div>
-                                <div class="grid-time" data-hour="10">10:00</div><div class="grid-item" data-day="Monday" data-hour="10"></div><div class="grid-item" data-day="Tuesday" data-hour="10"></div><div class="grid-item" data-day="Wednesday" data-hour="10"></div><div class="grid-item" data-day="Thursday" data-hour="10"></div><div class="grid-item" data-day="Friday" data-hour="10"></div>
-                                <div class="grid-time" data-hour="11">11:00</div><div class="grid-item" data-day="Monday" data-hour="11"></div><div class="grid-item" data-day="Tuesday" data-hour="11"></div><div class="grid-item" data-day="Wednesday" data-hour="11"></div><div class="grid-item" data-day="Thursday" data-hour="11"></div><div class="grid-item" data-day="Friday" data-hour="11"></div>
-                                <div class="grid-time" data-hour="12">12:00</div><div class="grid-item" data-day="Monday" data-hour="12"></div><div class="grid-item" data-day="Tuesday" data-hour="12"></div><div class="grid-item" data-day="Wednesday" data-hour="12"></div><div class="grid-item" data-day="Thursday" data-hour="12"></div><div class="grid-item" data-day="Friday" data-hour="12"></div>
-                                <div class="grid-time" data-hour="13">13:00</div><div class="grid-item" data-day="Monday" data-hour="13"></div><div class="grid-item" data-day="Tuesday" data-hour="13"></div><div class="grid-item" data-day="Wednesday" data-hour="13"></div><div class="grid-item" data-day="Thursday" data-hour="13"></div><div class="grid-item" data-day="Friday" data-hour="13"></div>
-                                <div class="grid-time" data-hour="14">14:00</div><div class="grid-item" data-day="Monday" data-hour="14"></div><div class="grid-item" data-day="Tuesday" data-hour="14"></div><div class="grid-item" data-day="Wednesday" data-hour="14"></div><div class="grid-item" data-day="Thursday" data-hour="14"></div><div class="grid-item" data-day="Friday" data-hour="14"></div>
-                                <div class="grid-time" data-hour="15">15:00</div><div class="grid-item" data-day="Monday" data-hour="15"></div><div class="grid-item" data-day="Tuesday" data-hour="15"></div><div class="grid-item" data-day="Wednesday" data-hour="15"></div><div class="grid-item" data-day="Thursday" data-hour="15"></div><div class="grid-item" data-day="Friday" data-hour="15"></div>
-                                <div class="grid-time" data-hour="16">16:00</div><div class="grid-item" data-day="Monday" data-hour="16"></div><div class="grid-item" data-day="Tuesday" data-hour="16"></div><div class="grid-item" data-day="Wednesday" data-hour="16"></div><div class="grid-item" data-day="Thursday" data-hour="16"></div><div class="grid-item" data-day="Friday" data-hour="16"></div>
-                                <div class="grid-time" data-hour="17">17:00</div><div class="grid-item" data-day="Monday" data-hour="17"></div><div class="grid-item" data-day="Tuesday" data-hour="17"></div><div class="grid-item" data-day="Wednesday" data-hour="17"></div><div class="grid-item" data-day="Thursday" data-hour="17"></div><div class="grid-item" data-day="Friday" data-hour="17"></div>
-                                <div class="grid-time" data-hour="18">18:00</div><div class="grid-item" data-day="Monday" data-hour="18"></div><div class="grid-item" data-day="Tuesday" data-hour="18"></div><div class="grid-item" data-day="Wednesday" data-hour="18"></div><div class="grid-item" data-day="Thursday" data-hour="18"></div><div class="grid-item" data-day="Friday" data-hour="18"></div>
-                                <div class="grid-time" data-hour="19">19:00</div><div class="grid-item" data-day="Monday" data-hour="19"></div><div class="grid-item" data-day="Tuesday" data-hour="19"></div><div class="grid-item" data-day="Wednesday" data-hour="19"></div><div class="grid-item" data-day="Thursday" data-hour="19"></div><div class="grid-item" data-day="Friday" data-hour="19"></div>
-                                <div class="grid-time" data-hour="20">20:00</div><div class="grid-item" data-day="Monday" data-hour="20"></div><div class="grid-item" data-day="Tuesday" data-hour="20"></div><div class="grid-item" data-day="Wednesday" data-hour="20"></div><div class="grid-item" data-day="Thursday" data-hour="20"></div><div class="grid-item" data-day="Friday" data-hour="20"></div>
-                                <div class="grid-time" data-hour="21">21:00</div><div class="grid-item" data-day="Monday" data-hour="21"></div><div class="grid-item" data-day="Tuesday" data-hour="21"></div><div class="grid-item" data-day="Wednesday" data-hour="21"></div><div class="grid-item" data-day="Thursday" data-hour="21"></div><div class="grid-item" data-day="Friday" data-hour="21"></div>
-                                <div class="grid-time" data-hour="22">22:00</div><div class="grid-item" data-day="Monday" data-hour="22"></div><div class="grid-item" data-day="Tuesday" data-hour="22"></div><div class="grid-item" data-day="Wednesday" data-hour="22"></div><div class="grid-item" data-day="Thursday" data-hour="22"></div><div class="grid-item" data-day="Friday" data-hour="22"></div>
-                                <div class="grid-time" data-hour="23">23:00</div><div class="grid-item" data-day="Monday" data-hour="23"></div><div class="grid-item" data-day="Tuesday" data-hour="23"></div><div class="grid-item" data-day="Wednesday" data-hour="23"></div><div class="grid-item" data-day="Thursday" data-hour="23"></div><div class="grid-item" data-day="Friday" data-hour="23"></div>
-                            </div>
-                        </div>
-                    </section>
+                        <div class="grid-time" data-hour="01">01:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="1"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="1"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="1"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="1"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="1"></div>
+
+                        <div class="grid-time" data-hour="02">02:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="2"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="2"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="2"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="2"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="2"></div>
+
+                        <div class="grid-time" data-hour="03">03:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="3"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="3"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="3"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="3"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="3"></div>
+
+                        <div class="grid-time" data-hour="04">04:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="4"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="4"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="4"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="4"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="4"></div>
+
+                        <div class="grid-time" data-hour="05">05:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="5"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="5"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="5"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="5"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="5"></div>
+
+                        <div class="grid-time" data-hour="06">06:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="6"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="6"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="6"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="6"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="6"></div>
+
+                        <div class="grid-time" data-hour="07">07:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="7"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="7"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="7"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="7"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="7"></div>
+
+                        <div class="grid-time" data-hour="08">08:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="8"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="8"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="8"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="8"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="8"></div>
+
+                        <div class="grid-time" data-hour="09">09:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="9"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="9"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="9"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="9"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="9"></div>
+
+                        <div class="grid-time" data-hour="10">10:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="10"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="10"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="10"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="10"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="10"></div>
+
+                        <div class="grid-time" data-hour="11">11:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="11"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="11"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="11"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="11"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="11"></div>
+
+                        <div class="grid-time" data-hour="12">12:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="12"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="12"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="12"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="12"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="12"></div>
+
+                        <div class="grid-time" data-hour="13">13:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="13"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="13"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="13"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="13"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="13"></div>
+
+                        <div class="grid-time" data-hour="14">14:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="14"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="14"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="14"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="14"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="14"></div>
+
+                        <div class="grid-time" data-hour="15">15:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="15"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="15"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="15"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="15"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="15"></div>
+
+                        <div class="grid-time" data-hour="16">16:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="16"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="16"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="16"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="16"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="16"></div>
+
+                        <div class="grid-time" data-hour="17">17:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="17"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="17"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="17"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="17"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="17"></div>
+
+                        <div class="grid-time" data-hour="18">18:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="18"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="18"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="18"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="18"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="18"></div>
+
+                        <div class="grid-time" data-hour="19">19:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="19"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="19"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="19"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="19"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="19"></div>
+
+                        <div class="grid-time" data-hour="20">20:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="20"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="20"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="20"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="20"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="20"></div>
+
+                        <div class="grid-time" data-hour="21">21:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="21"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="21"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="21"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="21"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="21"></div>
+
+                        <div class="grid-time" data-hour="22">22:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="22"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="22"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="22"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="22"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="22"></div>
+
+                        <div class="grid-time" data-hour="23">23:00</div>
+                        <div class="grid-item" data-day="Monday" data-hour="23"></div>
+                        <div class="grid-item" data-day="Tuesday" data-hour="23"></div>
+                        <div class="grid-item" data-day="Wednesday" data-hour="23"></div>
+                        <div class="grid-item" data-day="Thursday" data-hour="23"></div>
+                        <div class="grid-item" data-day="Friday" data-hour="23"></div>
+                    </div>
+                </div>
+            </section>
     </div>
     <script type="module" src="scripts/main.js"></script>
 </body>
