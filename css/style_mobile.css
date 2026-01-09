@@ -1,0 +1,43 @@
+/* Mobile-specific styles for app layout */
+@media only screen and (max-width: 768px) {
+    #app {
+        flex-direction: column;
+        overflow-y: auto; /* Allow vertical scrolling on the whole app */
+        height: auto;
+    }
+
+    #sidebar, #editor-area, #calendar-area {
+        flex: 1 0 auto; /* Allow sections to grow but not shrink below content */
+        width: 100%;
+        min-height: 300px; /* Sensible default min-height */
+        border-right: none;
+        border-left: none;
+        border-bottom: 2px solid var(--bg2);
+        box-sizing: border-box;
+    }
+
+    #sidebar {
+        min-height: auto; /* Let file list and details determine height */
+    }
+
+    #editor-area {
+        min-height: 40vh; /* Make editor a bit taller */
+    }
+    
+    #calendar-area {
+        min-height: 60vh; /* Make calendar a bit taller */
+        border-bottom: none; /* Last section doesn't need a bottom border */
+    }
+
+    /* Adjust calendar grid for mobile */
+    .calendar-grid-header {
+        grid-template-columns: 40px repeat(5, 1fr); /* Smaller hour column */
+    }
+    .schedule-grid {
+        grid-template-columns: 40px repeat(5, 1fr); /* Smaller hour column */
+    }
+    .grid-header, .grid-time {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+}
