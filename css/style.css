@@ -124,6 +124,49 @@ body {
     animation: pulseGlow 2s infinite alternate ease-in-out;
 }
 
+
+
+
+nav {
+    background-color: var(--bg1);
+    padding: 10px;
+    border-bottom: 2px solid var(--orange);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    position: relative;
+    padding: 10px 8px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--bg2);
+    transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+nav li:hover {
+    background-color: var(--bg2);
+}
+
+nav li.active {
+    background-color: var(--orange);
+    color: var(--bg0);
+    font-weight: 600;
+    animation: pulseGlow 2s infinite alternate ease-in-out;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+
+
 .delete-file-btn {
     position: absolute;
     right: 8px;
