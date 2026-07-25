@@ -2,7 +2,7 @@
 A scratchpad for your week, minimal notes&amp;calendar app using vanilla JavaScript and persistent storage.
 
 ---
-
+https://turpitufo.github.io/MoJoT/
 # SSW Project 
 
 I did this project so I would learn about js persistent storage.
