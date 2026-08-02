@@ -1,24 +1,23 @@
 # MoJoT
-A scratchpad for your week, minimal notes&amp;calendar app using vanilla JavaScript and persistent storage.
+A scratchpad for your week — a minimal notes & calendar app built with vanilla JavaScript and persistent storage.
 
----
-https://turpitufo.github.io/MoJoT/
-# SSW Project 
+**Live demo:** https://turpitufo.github.io/MoJoT/
 
-I did this project so I would learn about js persistent storage.
-I saw some time ago a passion project called noto.ooo and was mesmerized. So I though this was a good progression.
+## About this project
 
-I followed [this tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw&t=148s)(# Build a Notes App with JavaScript & Local Storage (No Frameworks)) except for "source of truth", which was fun to learn, I noticed all the tutorials about it on local storage use one global array approach, quick question to ai confirmed that it was the best method for me rather than complicating things with the appoach in the video. We are editing an array of notes on ram rather than the local storage for every event with a global `let notes = []`, if i understand correctly, might need further investergation ¯\_(ツ)_/¯
+I built this project to learn how JS persistent storage works, after being inspired by a passion project called noto.ooo.
 
- We have grid-items in the HTML so javascript can automatically fill in hour and date when we click at an item, and so it can render from a note with data-day and data-hour.
+I followed [this tutorial](https://www.youtube.com/watch?v=01YKQmia2Jw&t=148s) (*Build a Notes App with JavaScript & Local Storage — No Frameworks*) for the core notes functionality, with one deliberate deviation: the "source of truth" approach. Most local storage tutorials use a single global array, so I confirmed with AI that this was the right approach for my case rather than following the more complex pattern in the video. Notes are edited in memory via one global array (`let notes = []`) rather than reading/writing local storage on every event — which I believe is the more efficient approach, though it's something I'd like to validate further.
 
-The javascript was honestly above my level, I followed the video and w3school tutorials on event listeners, which caused problems in the first iterations. **I needed some AI help** for especially in renderCalendarEvents. 
+The grid-items in the HTML let JavaScript auto-fill the hour and date when a cell is clicked, and let it render a note back onto the grid using its `data-day` and `data-hour` attributes.
 
-And here is what I had to figure out and write 
+Much of the JavaScript here was beyond my starting skill level. I worked through the tutorial and w3schools' event listener guides, which led to a few early bugs, and used AI assistance for parts of the implementation — particularly `renderCalendarEvents`.
 
-- the http css files
-- added `day`, `start_hour` properties to notes for calendar functionality
-- js implementation of calendars since the video includes event listening and rendering for the notes list but calender was my implementation. 
+## What I built myself
+
+- the HTML/CSS
+- the `day` and `start_hour` note properties used for calendar functionality
+- the calendar view itself — the tutorial only covers rendering the notes list; the calendar logic was my own implementation:
 
 ```js
 for (i = 0; i < notes.length; i++) {
@@ -35,22 +34,16 @@ for (i = 0; i < notes.length; i++) {
 }
 ```
 
+This loops through every note. If a note has both `day` and `start_hour` set, it retrieves the hour, locates the matching grid cell, and updates its content and styling.
 
-- We itirate every note, 
-- if the note.day and note.start_hour both are not null we
-	- get the number from time. 
-- Change the style of the block, gridItem.
+For mobile, I explored an alternative flexbox layout, but the approaches I tried introduced more issues than they solved, so the current layout remains simplified for now.
 
+## In the future
 
-For mobile design I though of using a different flexbox, but it turns out lots of approaches just break and it needs lots of work. So it is simpler for now. 
-
-# In the future
-- [ ] I know creating calendar notes over each other looks like a bug now, but I will try a better implementation. 
+- [ ] Overlapping calendar notes currently stack on top of each other. I plan to implement a cleaner layout for this.
 
 ## Helps
 
-- https://www.youtube.com/watch?v=01YKQmia2Jw&t=148s
-	- Notes App with JavaScript & Local Storage
-- https://www.w3schools.com/js/js_events.asp
-	- event listeners
+- [Notes App with JavaScript & Local Storage](https://www.youtube.com/watch?v=01YKQmia2Jw&t=148s)
+- [W3Schools: event listeners](https://www.w3schools.com/js/js_events.asp)
 - duck.ai
