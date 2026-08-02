@@ -13,7 +13,7 @@ The grid-items in the HTML let JavaScript auto-fill the hour and date when a cel
 
 Much of the JavaScript here was beyond my starting skill level. I worked through the tutorial and w3schools' event listener guides, which led to a few early bugs, and used AI assistance for parts of the implementation — particularly `renderCalendarEvents`.
 
-## What I built myself
+## What is different that turorial
 
 - the HTML/CSS
 - the `day` and `start_hour` note properties used for calendar functionality
